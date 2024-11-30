@@ -19,7 +19,7 @@ For each detected face, DeepFace is used to extract facial embeddings, which are
 DBSCAN (Density-Based Spatial Clustering of Applications with Noise) is used to cluster the face embeddings. It groups similar faces together and labels outliers (faces that do not fit into any cluster) with -1.
 
 ## Duplicate Removal:
-Duplicate faces within the same cluster are removed by comparing their embeddings using cosine similarity. If two faces are similar (based on a cosine similarity threshold of 0.95), one is discarded.
+Duplicate faces within the same cluster are removed by comparing their embeddings using cosine similarity. If two faces are similar (based on a cosine similarity threshold of 0.8), one is discarded.
 
 ## Emotion Analysis:
 DeepFace's emotion analysis is used to determine the dominant emotion (e.g., happy, sad, angry) for each representative face.
@@ -29,7 +29,7 @@ The script generates a Word document that contains a table with cluster statisti
 
 
 # Notes:
-The cosine similarity threshold (0.95) used for eliminating duplicates can be adjusted based on how strict or lenient you want the duplicate detection to be.
+The cosine similarity threshold (0.8) used for eliminating duplicates can be adjusted based on how strict or lenient you want the duplicate detection to be.
 The DBSCAN parameters (eps and min_samples) can also be adjusted for different clustering behavior depending on the density of your data.
 
 
