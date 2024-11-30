@@ -1,19 +1,6 @@
 # Introduction
 This project analyzes video data to detect faces, extract facial embeddings using the DeepFace library, and then clusters the faces using DBSCAN. The goal is to group similar faces together, eliminate duplicates, and generate a report that includes performance metrics for each cluster along with the dominant emotion for each representative face.
 
-# Features
-## Face Detection: 
-Detect faces in video frames using the dlib detector.
-## Face Embeddings: 
-Extract facial embeddings using the DeepFace library.
-## Clustering: 
-Use DBSCAN for clustering faces based on their embeddings.
-## Duplicate Removal: 
-Remove duplicate faces within clusters by comparing embeddings using cosine similarity.
-## Emotion Analysis: 
-Identify the dominant emotion for each representative face.
-## Report Generation: 
-Create a Word document report with clusters, performance stats, and emotion analysis.
 
 # Files:
 Assignment Data.xlsx: Excel file containing video URLs and performance metrics. The Video URL column should contain the path to the video file, and the Performance column should contain a numeric value representing the performance metric associated with each video.
@@ -40,9 +27,11 @@ DeepFace's emotion analysis is used to determine the dominant emotion (e.g., hap
 ## Report Generation:
 The script generates a Word document that contains a table with cluster statistics, including the average performance score, representative face image, and dominant emotion for each cluster.
 
+
 # Notes:
 The cosine similarity threshold (0.95) used for eliminating duplicates can be adjusted based on how strict or lenient you want the duplicate detection to be.
 The DBSCAN parameters (eps and min_samples) can also be adjusted for different clustering behavior depending on the density of your data.
+
 
 # Example Output (Word Document):
 Cluster 0:
